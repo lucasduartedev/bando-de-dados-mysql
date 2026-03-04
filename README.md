@@ -14,7 +14,6 @@ Esse repositório busca mostrar técnicas básicas de desenvolvimento de banco d
 - **Base de dados:** MySQL v9.0.1
 
 
-
 ## Na prática
 
 - *__Docker__*
@@ -30,7 +29,7 @@ O _Docker_ será usado para virtualizar a base de dados MySQL.
 Agora criaremos um container para manter nossa base de dados disponível:
 
 ```
-> docker run --name nome_do_container -e MYSQL_ROOT_PASSWORD=senha -p 3306:3306 -d mysql
+> docker run --name NOME_DO_CONTAINER -e MYSQL_ROOT_PASSWORD=senha -p 3306:3306 -d mysql
 ```
 
 Para listar o container criado digite:
@@ -42,7 +41,7 @@ docker ps
 Para acessar a base de dados via linha de comando:
 
 ```
-docker exec -it nome_do_container mysql -p
+docker exec -it NOME_DO_CONTAINER mysql -p
 ```
 
 *Observação: Irá solicitar a senha configurada pelo usuário.*
@@ -52,7 +51,6 @@ Ao acessar a base de dados MySQL, deixamos o contexto do Docker de lado e focare
 
 <hr>
 
-<!--
 
 - *__MySQL__*
 
@@ -60,7 +58,7 @@ _Observações iniciais_
 
 Para todo comando SQL busque usar 'ponto e vírgula' (;) ao final de cada comando. Isso indicará o final de cada instrução aplicada pelo usuário.
 
-_Criar base de dados_
+__Criar base de dados:__
 
 ```
 CREATE DATABASE `nome_base_de_dados`
@@ -68,14 +66,30 @@ CHARACTER SET utf8
 DEFAULT COLLATE utf8_general_ci;
 ```
 
-Ao criar a base de dados é necessário indicar ao gerenciador do banco de dados que queremos utilizar a base de dados desejada para realizar nossas manipulações.
+Das três linhas de comando mostrada acima pode ser usada apenas a primeira linha para criar o seu banco de dados, desde que tenha o ponto e vírgula ao final da instrução. Já a segunda e terceira linha são opcionais, pois atribui algumas configurações de caracteres especiais, como acentuação.
 
-_Selecionar base de dados_
+__Listar base de dados existentes:__
+
+```
+SHOW DATABASES;
+```
+
+Nesse ponto será necessário indicar ao gerenciador do banco de dados que queremos usar uma base de dados em específica.
+
+__Selecionar base de dados:__
 
 ```
 USE nome_base_de_dados;
 ```
 
+<!--
+__Criar tabela:__
+
+```
+CREATE TABLE nome_da_tabela (
+
+);
+```
+
 ---------------------------------------  -->
 
-<!-- _Criar tabela_ -->
