@@ -82,14 +82,31 @@ __Selecionar base de dados:__
 USE nome_base_de_dados;
 ```
 
-<!--
-__Criar tabela:__
+<hr/>
 
-```
-CREATE TABLE nome_da_tabela (
+__Tipo de dados__
 
-);
-```
+Para armazenar os dados é necessário definir o tipo, se é texto, numérico, entre outros.
 
----------------------------------------  -->
+- **Numéricos:**
+
+- *Inteiro:* TyniInt, SmallInt, Int, MediumInt, BigInt;
+- *Real:* Decimal, float, Double, Real;
+- *Lógico:* Bit, Boolean.
+
+- **Data/Tempo:**
+
+- Date, DateTime, TimeStamp, Time, Year.
+
+- **Literal:**
+
+- *Caractere:* Char, Varchar;
+- *Texto:* TinyText, Text, MediumText, LongText;
+- *Binário:* TinyBlob, Blob, MediumBlob, LongBlob;
+- *Coleção:* Enum, Set.
+
+- **Espacial**
+
+- Geometry, Point, Polygon, MultiPolygon.
+
 
