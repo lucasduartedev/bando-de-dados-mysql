@@ -108,5 +108,39 @@ Para armazenar os dados é necessário definir o tipo, se é texto, numérico, e
 - **Espacial**
 
 - Geometry, Point, Polygon, MultiPolygon.
+<hr/>
 
+
+__Criar tabela:__
+
+Exemplo básico:
+```
+
+CREATE TABLE nome_da_tabela (
+    nome_campo tipo01,
+    nome_campo tipo01
+), DEFAULT CHARSET = utf8;
+```
+
+Exemplo prático. Tabela para armazenar dados de Produtos:
+```
+
+CREATE TABLE produtos (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(75) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    estoque INT NOT NULL,
+    PRIMARY KEY(id)
+) DEFAULT CHARSET = utf8;
+```
+
+<!--
+<hr/>
+
+__Apagar tabela:__
+
+```
+DROP TABLE nome_da_tabela;
+```
+-->
 
